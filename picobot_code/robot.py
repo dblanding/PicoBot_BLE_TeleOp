@@ -4,6 +4,7 @@ MicroPython code for Pico car project using:
 * 56:1 gear motors with encoders
 """
 
+import time
 from machine import Pin, PWM
 from parameters import FULL_SPD, LOW_SPD
 
@@ -38,21 +39,29 @@ class Robot():
         print("forward")
         set_mtr_dirs('FWD', 'FWD')
         set_mtr_spd(self.spd)
+        time.sleep(0.5)
+        self.stop()
 
     def backward(self):
         print("backward")
         set_mtr_dirs('REV', 'REV')
         set_mtr_spd(self.spd)
+        time.sleep(0.5)
+        self.stop()
 
     def left(self):
         print("left")
         set_mtr_dirs('REV', 'FWD')
         set_mtr_spd(self.spd/2)
+        time.sleep(0.5)
+        self.stop()
 
     def right(self):
         print("right")
         set_mtr_dirs('FWD', 'REV')
         set_mtr_spd(self.spd/2)
+        time.sleep(0.5)
+        self.stop()
 
     def stop(self):
         print("stop")

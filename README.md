@@ -1,4 +1,4 @@
-# TeleOperated PicoBot using Bluetotooth (BLE) communication between two Pico-W devices
+# TeleOperated PicoBot using Bluetooth (BLE) communication between two Pico-W devices
 
 * Implementation of Kevin McAleer's [Bluetooth remote controlled robot tutorial](https://www.kevsrobots.com/blog/bluetooth-remote.html) but with the following variations:
     * For the remote control (which is the Bluetooth server), I will use a [Pico LCD 1.14](https://www.waveshare.com/wiki/Pico-LCD-1.14) device instead of the Pimoroni Display device used by Kevin
